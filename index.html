@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Launcher</title>
+</head>
+<body>
+    <h1>Minecraft Launcher</h1>
+    <button id="launchButton">Lancer Minecraft</button>
+
+    <script>
+        document.getElementById('launchButton').addEventListener('click', () => {
+            const config = {
+                version: '1.20.1',
+                forge: true,
+                modpackPath: './modpack',
+            };
+            window.electron.launchMinecraft(config);
+        });
+    </script>
+    <p class="log"></p>
+</body>
+</html>
